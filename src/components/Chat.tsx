@@ -23,7 +23,7 @@ const Chat: React.FC = () => {
     try {
       const fetchGeminiResponse = async (prompt: string) => {
         const response = await ollama.chat({
-          model: "gemma3:4b",
+          model: "gemma3:12b",
           messages: [{ role: "user", content: prompt }],
         });
         console.log(response.message.content);
