@@ -21,20 +21,14 @@ const Chat: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          model: "gpt-3.5-turbo",
-          messages: [{ role: "user", content: input }],
-          max_tokens: 500,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const fetchGeminiResponse = async (prompt: string) => {
+        const response = await ollama.chat({
+          model: "gemma3:4b",
+          messages: [{ role: "user", content: prompt }],
+        });
+        console.log(response.message.content);
+        return response.message.content;
+      };
 
       const aiMessage = response.data.choices[0].message.content;
       setMessages((prev) => [...prev, { text: aiMessage, isUser: false }]);
@@ -43,7 +37,7 @@ const Chat: React.FC = () => {
       setMessages((prev) => [
         ...prev,
         {
-          text: "Ошибка соединения с нейросетью",
+          text: "Ошибка соединения с Киногидом",
           isUser: false,
         },
       ]);
