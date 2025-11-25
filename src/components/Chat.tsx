@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { Ollama } from "ollama";
 import "./Chat.css";
 
 interface Message {
@@ -12,6 +12,15 @@ const Chat: React.FC = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const fetchGeminiResponse = async (prompt: string): Promise<string> => {
+    const ollama = new Ollama();
+    const response = await ollama.chat({
+      model: "gemma3:12b",
+      messages: [{ role: "user", content: prompt }],
+    });
+    return response.message.content;
+  };
+
   const handleSend = async () => {
     if (!input.trim()) return;
 
@@ -21,23 +30,14 @@ const Chat: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const fetchGeminiResponse = async (prompt: string) => {
-        const response = await ollama.chat({
-          model: "gemma3:12b",
-          messages: [{ role: "user", content: prompt }],
-        });
-        console.log(response.message.content);
-        return response.message.content;
-      };
-
-      const aiMessage = response.data.choices[0].message.content;
-      setMessages((prev) => [...prev, { text: aiMessage, isUser: false }]);
+      const aiResponse = await fetchGeminiResponse(input);
+      setMessages((prev) => [...prev, { text: aiResponse, isUser: false }]);
     } catch (error) {
       console.error("Ошибка запроса:", error);
       setMessages((prev) => [
         ...prev,
         {
-          text: "Ошибка соединения с Киногидом",
+          text: "Ошибка соединения с нейросетью.",
           isUser: false,
         },
       ]);
