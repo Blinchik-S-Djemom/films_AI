@@ -18,6 +18,7 @@ const Chat: React.FC = () => {
       model: "gemma3:12b",
       messages: [{ role: "user", content: prompt }],
     });
+
     return response.message.content;
   };
 

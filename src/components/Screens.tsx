@@ -1,7 +1,10 @@
 import { Ollama } from "ollama";
 
-const imagePath = "./test.jpg";
-const fetchGeminiResponse = async (): Promise<string> => {
+const fetchGeminiResponse = async (base64Image: string): Promise<string> => {
+  const base64Data = base64Image.includes("base64,")
+    ? base64Image.split("base64,")[1]
+    : base64Image;
+
   const ollama = new Ollama();
   const response = await ollama.chat({
     model: "gemma3:12b",
@@ -9,7 +12,7 @@ const fetchGeminiResponse = async (): Promise<string> => {
       {
         role: "user",
         content: "Из какого аниме, фильма, мультика или сериала этот кадр?",
-        images: [imagePath],
+        images: [base64Data],
       },
     ],
     stream: false,
