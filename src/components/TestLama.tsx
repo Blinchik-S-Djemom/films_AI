@@ -1,7 +1,5 @@
 import { Ollama } from "ollama";
-import { ansver } from "./questions";
 
-const ollama = new Ollama();
 const Testansver = async (prompt: string): Promise<string> => {
   const ollama = new Ollama();
   const response = await ollama.chat({
@@ -9,7 +7,7 @@ const Testansver = async (prompt: string): Promise<string> => {
     messages: [
       {
         role: "user",
-        content: ansver.join(""),
+        content: prompt,
       },
     ],
   });
