@@ -1,27 +1,36 @@
 const checkboxOptions1 = [
-  { label: "Веселое", value: "Happy" },
-  { label: "Нейтральное", value: "neutral" },
-  { label: "Грустное", value: "Sad" },
+  { label: "Веселое", value: "Веселое" },
+  { label: "Нейтральное", value: "Нейтральное" },
+  { label: "Грустное", value: "Грустное" },
 ];
 
 const checkboxOptions2 = [
-  { label: "Комедия", value: "Comedy" },
-  { label: "Фантастика", value: "Sci-Fi" },
-  { label: "Драма", value: "Drama" },
-  { label: "Триллер", value: "Thriller" },
-  { label: "Ужасы", value: "Horror" },
-  { label: "Романтика", value: "Romance" },
-  { label: "Приключения", value: "Adventure" },
-  { label: "Детектив", value: "Mystery" },
+  { label: "Комедия", value: "Комедия" },
+  { label: "Фантастика", value: "Фантастика" },
+  { label: "Драма", value: "Драма" },
+  { label: "Триллер", value: "Триллер" },
+  { label: "Ужасы", value: "Ужасы" },
+  { label: "Романтика", value: "Романтика" },
+  { label: "Приключения", value: "Приключения" },
+  { label: "Детектив", value: "Детектив" },
+  { label: "Криминал", value: "Криминал" },
+  { label: "Космос", value: "Космос" },
+  { label: "Сверхъестественное", value: "Сверхъестественное" },
 ];
 
 const checkboxOptions3 = [
-  { label: "Крутой сюжет с неожиданной развязкой", value: "Plot" },
-  { label: "Развитие персонажей", value: "Characters" },
-  { label: "Атмосфера и визуальный стиль", value: "Atmosphere" },
-  { label: "Умный юмор", value: "Humor" },
-  { label: "Захватывающие экшн-сцены", value: "Action" },
-  { label: "Философская глубина", value: "Deep" },
+  {
+    label: "Крутой сюжет с неожиданной развязкой",
+    value: "Крутой сюжет с неожиданной развязкой",
+  },
+  { label: "Развитие персонажей", value: "Развитие персонажей" },
+  {
+    label: "Атмосфера и визуальный стиль",
+    value: "Атмосфера и визуальный стил",
+  },
+  { label: "Умный юмор", value: "Умный юмо" },
+  { label: "Захватывающие экшн-сцены", value: "Экшен" },
+  { label: "Философская глубина", value: "Философская глубина" },
 ];
 
 const checkboxOptions4 = [
@@ -33,48 +42,42 @@ const checkboxOptions4 = [
 ];
 
 const checkboxOptions5 = [
-  { label: "В одиночку", value: "alone" },
-  { label: "С семьей (включая детей)", value: "family" },
-  { label: "С друзьями", value: "friends" },
-  { label: "Со второй половинкой", value: "partner" },
-  { label: "На вечеринке/в компании", value: "party" },
+  { label: "В одиночку", value: "один" },
+  { label: "С семьей (включая детей)", value: "С семьёй" },
+  { label: "С друзьями", value: "с друзьями" },
+  { label: "Со второй половинкой", value: "со второй половинкой" },
+  { label: "На вечеринке/в компании", value: "На вечеринке/в компании" },
 ];
 
 const checkboxOptions6 = [
-  { label: "Полнометражный фильм (~2 часа)", value: "feature" },
-  { label: "Короткометражный фильм (< 60 мин.)", value: "short" },
-  { label: "Мини-сериал (2-6 серий)", value: "miniseries" },
+  { label: "Полнометражный фильм (~2 часа)", value: "Полнометражный фильм" },
+  {
+    label: "Короткометражный фильм (< 60 мин.)",
+    value: "короткометражный фильм",
+  },
+  { label: "Мини-сериал (2-6 серий)", value: "мини-сериал" },
   { label: "Не важно", value: "any" },
 ];
 
 const checkboxOptions7 = [
-  { label: "Классика (до 70-х)", value: "old" },
-  { label: "80-е - 90-е", value: "80s-90s" },
-  { label: "Современное кино (2000-е и новее)", value: "modern" },
+  { label: "Классика (до 70-х)", value: "до 1970 годов" },
+  { label: "80-е - 90-е", value: "80е-90е года" },
+  { label: "Современное кино (2000-е и новее)", value: "после 2000 г" },
   { label: "Не важно", value: "any" },
 ];
 
 const checkboxOptions8 = [
-  { label: "С известными актерами", value: "famous" },
-  { label: "С независимыми актерами", value: "new" },
+  { label: "С известными актерами", value: "Со знаменитыми актерами" },
+  { label: "С малоизвестнымы актерами", value: "С малоизвестнымы актерами" },
   { label: "Не важно", value: "any" },
 ];
 
 const checkboxOptions9 = [
-  { label: "Медленное, вдумчивое", value: "slow" },
-  { label: "Умеренный темп", value: "medium" },
-  { label: "Динамичный и напряженный", value: "fast" },
+  { label: "Медленное, вдумчивое", value: "Медленное,вдумчивое" },
+  { label: "Умеренный темп", value: "Умеренный темп" },
+  { label: "Динамичный и напряженный", value: "Динамичный и напряженный" },
   { label: "Не важно", value: "any" },
 ];
-
-/*const sliderOption1 = {
-  min: 0,
-  max: 9,
-  step: 0.5,
-  default: 6.5,
-  minLabel: "Любой рейтинг",
-  maxLabel: "Только шедевры (8.5+)",
-};*/
 
 const checkboxOptions10 = [
   { label: "Ниже 5⭐", value: "1-5" },
@@ -84,10 +87,10 @@ const checkboxOptions10 = [
 ];
 
 const checkboxOptions11 = [
-  { label: "Фильм", value: "Films" },
-  { label: "Аниме", value: "Anime" },
-  { label: "Сериал", value: "Serial" },
-  { label: "Мультфильм", value: "Cartoon" },
+  { label: "Фильм", value: "Фильм" },
+  { label: "Аниме", value: "Анииме" },
+  { label: "Сериал", value: "Сериал" },
+  { label: "Мультфильм", value: "Мультфильм" },
 ];
 
 const a = {
