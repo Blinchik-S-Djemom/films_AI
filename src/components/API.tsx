@@ -5,7 +5,7 @@ import {
 } from "@openmoviedb/kinopoiskdev_client";
 import "./API.css";
 
-const kp = new KinopoiskDev("G4NNKVT-JHN400C-QXT5A8H-S1HM0KN");
+const kp = new KinopoiskDev("__");
 
 interface Message {
   message: string;
