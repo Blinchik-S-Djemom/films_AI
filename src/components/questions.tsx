@@ -82,7 +82,7 @@ const checkboxOptions9 = [
 const checkboxOptions10 = [
   { label: "Ниже 5⭐", value: "1-5" },
   { label: "Выше 5⭐", value: "5-10" },
-  { label: "Динамичный и напряженныИдеальный 9-10⭐", value: "9-10" },
+  { label: "Идеальный 9-10⭐", value: "9-10" },
   { label: "Не важно", value: "any" },
 ];
 
@@ -126,9 +126,6 @@ const e = {
 
 const f = {
   title: "Насколько высокие требования к рейтингу?",
-  /*subtitle:
-    "Перетащи ползунок, чтобы выбрать минимальный рейтинг IMDb/Kinopoisk",
-  type: "slider",*/
   type: "checkbox",
   quest: checkboxOptions10,
 };

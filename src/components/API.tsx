@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   KinopoiskDev,
   type MovieDtoV13,
 } from "@openmoviedb/kinopoiskdev_client";
-import "./API.css";
-
-const kp = new KinopoiskDev("__");
 
 interface Message {
   message: string;
 }
+
+const apiKey = import.meta.env.VITE_KP_API_KEY;
+
+const kp = new KinopoiskDev(apiKey, "/api");
 
 function MovieRandom() {
   const [data, setData] = useState<MovieDtoV13 | null>(null);
@@ -31,7 +32,7 @@ function MovieRandom() {
 
         setIsLoaded(true);
       } catch (err) {
-        console.warn;
+        console.warn(err);
         setError({ message: "Нет подключения(" });
         setIsLoaded(true);
       }

@@ -101,7 +101,7 @@ const Test: React.FC = () => {
   if (count === -1) {
     return (
       <div className="page-container">
-        <h1>🎥🎟️🍿Тест🍿🎟️🎥</h1>
+        <h1 style={{ color: "White" }}>🎥🎟️🍿Тест🍿🎟️🎥</h1>
         <p>Пройдите тест для того, что бы подобрать ИДЕАЛЬНЫЙ фильм для себя</p>
 
         {showResult && result ? (
@@ -143,7 +143,7 @@ const Test: React.FC = () => {
   if (count <= Quiz.length - 1) {
     return (
       <div className="page-container">
-        <h1>🎥🎟️🍿Тест🍿🎟️🎥</h1>
+        <h1 style={{ color: "White" }}>🎥🎟️🍿Тест🍿🎟️🎥</h1>
         <ConfigProvider
           button={{
             className: styles.linearGradientButton,
@@ -171,7 +171,7 @@ const Test: React.FC = () => {
 
   return (
     <div className="page-container">
-      <h1>🎥🎟️🍿Тест🍿🎟️🎥</h1>
+      <h1 style={{ color: "White" }}>🎥🎟️🍿Тест🍿🎟️🎥</h1>
 
       {showResult && result ? (
         <Card
