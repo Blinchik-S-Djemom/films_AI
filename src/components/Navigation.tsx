@@ -38,6 +38,22 @@ const Navigation: React.FC = () => {
         >
           Тест
         </Link>
+        {/*<Link
+          to="/converter"
+          className={`nav-button ${
+            location.pathname === "/converter" ? "active" : ""
+          }`}
+        >
+          Конвертер
+        </Link>
+        <Link
+          to="/currency-rates"
+          className={`nav-button ${
+            location.pathname === "/currency-rates" ? "active" : ""
+          }`}
+        >
+          Курс валют
+        </Link>*/}
       </div>
     </nav>
   );

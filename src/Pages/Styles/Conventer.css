@@ -1,0 +1,232 @@
+.converter-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.converter-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.converter-header h1 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 2.5em;
+}
+
+.last-update {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+.converter-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.converter-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.amount-input {
+  flex: 1;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.amount-input-field {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.amount-input-field:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.currency-selectors {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.currency-selector {
+  flex: 1;
+}
+
+.currency-dropdown {
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.currency-dropdown:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.swap-button {
+  padding: 12px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  height: fit-content;
+  margin-bottom: 8px;
+}
+
+.swap-button:hover {
+  background: #2980b9;
+}
+
+.quick-currency-selection {
+  margin-bottom: 25px;
+}
+
+.quick-currency-selection h3 {
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.quick-currency-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quick-currency-btn {
+  padding: 10px 20px;
+  background: #ecf0f1;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.quick-currency-btn:hover {
+  background: #d5dbdb;
+}
+
+.quick-currency-btn.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.conversion-result {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-left: 4px solid #3498db;
+}
+
+.result-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.result-amount,
+.result-converted {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.5em;
+}
+
+.result-currency {
+  color: #7f8c8d;
+  font-weight: 600;
+}
+
+.result-equals {
+  color: #3498db;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin: 0 10px;
+}
+
+.exchange-rate-info {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1em;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+}
+
+.currency-info {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.currency-info h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.currency-rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.currency-rate-item {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.currency-code {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.currency-name {
+  color: #7f8c8d;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.currency-value {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 0.95em;
+}

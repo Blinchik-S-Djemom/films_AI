@@ -155,7 +155,7 @@ const j = {
 };
 
 const k = {
-  title: "Что именно вы ищите?",
+  title: "Что именно вы ищете?",
   type: "checkbox",
   quest: checkboxOptions11,
 };

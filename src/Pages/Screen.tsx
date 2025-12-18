@@ -71,24 +71,22 @@ const Screen: React.FC = () => {
       <h1 style={{ color: "White" }}>🎬🎞️Поиск по скриншоту🎞️🎬</h1>
       <p>Загрузите фото фрагремта для поиска фильма или сериала</p>
 
-      <Dragger {...props}>
+      <Dragger
+        {...props}
+        style={{ background: "#06021dff", opacity: 0.5 }}
+        maxCount={1}
+      >
         <p className="ant-upload-drag-icon">
           <InboxOutlined />
         </p>
-        <p className="ant-upload-text">
+        <p className="ant-upload-text" style={{ color: "#ffffffff" }}>
           Нажмите или перетащите фото для загрузки
         </p>
-        <p className="ant-upload-hint">
+        <p className="ant-upload-hint" style={{ color: "#ffffffff" }}>
           Добавьте сюда фото или скрин нужного фильма, что бы мы помогли Вам
           скорее приступить к его просмотру
         </p>
       </Dragger>
-
-      {selectedFile && !showResult && (
-        <div style={{ marginTop: 16, textAlign: "center" }}>
-          <Text type="secondary">Выбран файл: {selectedFile.name}</Text>
-        </div>
-      )}
 
       <div style={{ marginTop: 24, textAlign: "center" }}>
         <Space>
@@ -98,6 +96,7 @@ const Screen: React.FC = () => {
             onClick={handleSearch}
             loading={loading}
             disabled={!selectedFile}
+            style={{ background: "#330069ff", color: "#ffffffff" }}
           >
             {loading ? "Идет поиск..." : "Начать поиск"}
           </Button>
@@ -107,6 +106,7 @@ const Screen: React.FC = () => {
             size="large"
             onClick={handleReset}
             disabled={!selectedFile && !searchResult}
+            style={{ background: "#330069ff", color: "#ffffffff" }}
           >
             Сбросить
           </Button>
@@ -116,7 +116,7 @@ const Screen: React.FC = () => {
       {loading && (
         <div style={{ marginTop: 32, textAlign: "center" }}>
           <Spin size="large" />
-          <Paragraph style={{ marginTop: 16 }}>
+          <Paragraph style={{ marginTop: 16, color: "#ffffffff" }}>
             Идет поиск информации о фильме...
           </Paragraph>
         </div>

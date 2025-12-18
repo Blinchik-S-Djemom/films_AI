@@ -5,6 +5,8 @@ import Screen from "./Pages/Screen";
 import Test from "./Pages/Test";
 import Navigation from "./components/Navigation";
 import "./App.css";
+import Converter from "./Pages/Converter";
+import CurrencyRates from "./Pages/CurrencyRates";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/kinogid" element={<Kinogid />} />
           <Route path="/screen" element={<Screen />} />
           <Route path="/test" element={<Test />} />
+          {/*<Route path="/converter" element={<Converter />} />
+          <Route path="/currency-rates" element={<CurrencyRates />} />*/}
         </Routes>
       </div>
     </Router>
