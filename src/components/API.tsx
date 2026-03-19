@@ -24,6 +24,8 @@ function MovieRandom() {
         const responses = await Promise.all([
           kp.movie.getRandom(),
           kp.movie.getRandom(),
+          kp.movie.getRandom(),
+          kp.movie.getRandom(),
         ]);
 
         const successfulMovies = responses

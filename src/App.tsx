@@ -18,8 +18,8 @@ function App() {
           <Route path="/kinogid" element={<Kinogid />} />
           <Route path="/screen" element={<Screen />} />
           <Route path="/test" element={<Test />} />
-          {/*<Route path="/converter" element={<Converter />} />
-          <Route path="/currency-rates" element={<CurrencyRates />} />*/}
+          <Route path="/converter" element={<Converter />} />
+          <Route path="/currency-rates" element={<CurrencyRates />} />
         </Routes>
       </div>
     </Router>
